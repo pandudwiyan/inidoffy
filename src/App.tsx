@@ -78,13 +78,13 @@ function Scene() {
 const links = [
   {
     name: "Saweria",
-    label: "Support the silence",
+    label: "Support me",
     url: "https://saweria.co/inidoffy",
     icon: SaweriaIcon,
   },
   {
     name: "Discord",
-    label: "Echoes in the dark",
+    label: "Anyone bored?",
     url: "https://discord.com/users/1084807184782721024",
     icon: DiscordIcon,
   }
