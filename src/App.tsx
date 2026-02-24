@@ -78,39 +78,43 @@ function Scene() {
 const links = [
   {
     name: "Saweria",
-    label: "Support me",
+    label: "Support the silence",
     url: "https://saweria.co/inidoffy",
     icon: SaweriaIcon,
   },
   {
     name: "Discord",
-    label: "Anyone bored?",
-    url: "https://discord.gg/dqcHDaEm",
+    label: "Echoes in the dark",
+    url: "https://discord.com/users/1084807184782721024",
     icon: DiscordIcon,
   }
 ];
 
 const GlowingRing = () => (
-  <div className="absolute -inset-1.5 pointer-events-none z-0">
-    {/* Outer Glow Layer */}
+  <div className="absolute -inset-[2px] pointer-events-none z-0">
+    {/* Animated Neon Border */}
     <motion.div
-      animate={{ rotate: 360 }}
-      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-      className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,#3b82f6,#a855f7,#3b82f6)] opacity-70 blur-lg"
-    />
-    {/* Main Neon Ring */}
-    <motion.div
-      animate={{ rotate: 360 }}
-      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-      className="absolute inset-0 rounded-full p-[2px] bg-[conic-gradient(from_0deg,#60a5fa,#c084fc,#60a5fa)]"
-    >
-      <div className="w-full h-full rounded-full bg-black" />
-    </motion.div>
-    {/* Inner Glow Layer */}
-    <motion.div
-      animate={{ scale: [1, 1.05, 1] }}
+      animate={{ 
+        boxShadow: [
+          "0 0 5px #3b82f6, 0 0 10px #3b82f6",
+          "0 0 10px #a855f7, 0 0 20px #a855f7",
+          "0 0 5px #3b82f6, 0 0 10px #3b82f6"
+        ],
+        borderColor: ["#3b82f6", "#a855f7", "#3b82f6"]
+      }}
       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute inset-0 rounded-full border border-white/20 opacity-30"
+      className="absolute inset-0 rounded-full border-2 border-cyan-400"
+    />
+    {/* Rotating Gradient Ring */}
+    <motion.div
+      animate={{ rotate: 360 }}
+      transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+      className="absolute -inset-1 rounded-full border border-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-clip-border opacity-50"
+      style={{ 
+        maskImage: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+        maskComposite: 'exclude',
+        WebkitMaskComposite: 'destination-out'
+      }}
     />
   </div>
 );
@@ -168,6 +172,10 @@ export default function App() {
         >
           <div className="relative mb-8">
             <GlowingRing />
+            {/* Scanline Overlay for Profile */}
+            <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none z-20 opacity-20">
+              <div className="w-full h-full bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%]" />
+            </div>
             {/* Orbiting Rings Animation */}
             <motion.div 
               animate={{ rotate: 360 }}
@@ -191,24 +199,27 @@ export default function App() {
               className="absolute -inset-6 border border-white/10 rounded-full"
             />
             
-            <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-white/20 shadow-[0_0_50px_rgba(255,255,255,0.1)] relative z-10">
+            <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden relative z-10">
               <img 
                 src={profileData.avatar} 
                 alt={profileData.nickname} 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale brightness-75 contrast-125 sepia-[0.5] hue-rotate-[180deg] opacity-90"
                 referrerPolicy="no-referrer"
+              />
+              {/* Hologram Flicker Overlay */}
+              <motion.div 
+                animate={{ opacity: [0, 0.2, 0, 0.1, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="absolute inset-0 bg-cyan-400 mix-blend-overlay pointer-events-none"
               />
             </div>
           </div>
 
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold tracking-tight mb-4 text-white"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 1 }}
-          >
-            {profileData.nickname}
-          </motion.h1>
+          <div className="glitch-wrapper mb-6">
+            <h1 className="glitch-text" data-text={profileData.nickname}>
+              {profileData.nickname}
+            </h1>
+          </div>
         </motion.div>
 
         {/* Links Section */}
