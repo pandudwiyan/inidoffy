@@ -85,7 +85,7 @@ const links = [
   {
     name: "Discord",
     label: "Anyone bored?",
-    url: "https://discord.com/users/1084807184782721024",
+    url: "https://discord.gg/dqcHDaEm",
     icon: DiscordIcon,
   }
 ];
