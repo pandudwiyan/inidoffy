@@ -84,8 +84,8 @@ const links = [
   },
   {
     name: "Discord",
-    label: "Echoes in the dark",
-    url: "https://discord.com/users/1084807184782721024",
+    label: "inidoffy",
+    url: "https://discord.gg/dqcHDaEm",
     icon: DiscordIcon,
   }
 ];
