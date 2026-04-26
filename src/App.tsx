@@ -32,6 +32,19 @@ const DiscordIcon = ({ size = 20 }: { size?: number }) => (
   </svg>
 );
 
+const YoutubeIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor"/>
+  </svg>
+);
+
+const TrakteerIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C10.5 2 9.2 2.8 8.5 4H7C5.3 4 4 5.3 4 7V18C4 19.7 5.3 21 7 21H17C18.7 21 20 19.7 20 18V7C20 5.3 18.7 4 17 4H15.5C14.8 2.8 13.5 2 12 2ZM12 4C12.8 4 13.5 4.4 13.9 5H10.1C10.5 4.4 11.2 4 12 4ZM7 6H17C17.6 6 18 6.4 18 7V18C18 18.6 17.6 19 17 19H7C6.4 19 6 18.6 6 18V7C6 6.4 6.4 6 7 6ZM12 8.5C10.1 8.5 8.5 10.1 8.5 12C8.5 13.9 10.1 15.5 12 15.5C13.9 15.5 15.5 13.9 15.5 12C15.5 10.1 13.9 8.5 12 8.5ZM12 10C13.1 10 14 10.9 14 12C14 13.1 13.1 14 12 14C10.9 14 10 13.1 10 12C10 10.9 10.9 10 12 10Z" fill="currentColor"/>
+    <path d="M12 10.5L14 12.5L12 14.5L10 12.5L12 10.5Z" fill="currentColor"/>
+  </svg>
+);
+
 // --- 3D Orbiting Planets ---
 
 function OrbitingPlanet({ radius, speed, size, color = "#ffffff", offset = 0 }: { radius: number, speed: number, size: number, color?: string, offset?: number }) {
@@ -77,16 +90,22 @@ function Scene() {
 
 const links = [
   {
-    name: "Saweria",
-    label: "Support the silence",
-    url: "https://saweria.co/inidoffy",
-    icon: SaweriaIcon,
+    name: "Trakteer",
+    label: "Support me with a tip",
+    url: "https://trakteer.id/inidoffy",
+    icon: TrakteerIcon,
   },
   {
     name: "Discord",
     label: "inidoffy",
     url: "https://discord.gg/dqcHDaEm",
     icon: DiscordIcon,
+  },
+  {
+    name: "Youtube",
+    label: "Like, comment, and subscribe",
+    url: "https://www.youtube.com/@inidoflamingo",
+    icon: YoutubeIcon,
   }
 ];
 
