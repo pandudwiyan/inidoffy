@@ -96,12 +96,6 @@ const links = [
     icon: TrakteerIcon,
   },
   {
-    name: "Discord",
-    label: "inidoffy",
-    url: "https://discord.gg/dqcHDaEm",
-    icon: DiscordIcon,
-  },
-  {
     name: "Youtube",
     label: "Like, comment, and subscribe",
     url: "https://www.youtube.com/@inidoflamingo",
