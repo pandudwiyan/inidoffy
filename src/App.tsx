@@ -45,6 +45,18 @@ const TrakteerIcon = ({ size = 20 }: { size?: number }) => (
   </svg>
 );
 
+const ClockIcon = ({ size = 20 }: { size?: number }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 2c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8zm1 3h-2v5.586l3.707 3.707 1.414-1.414L13 11.757V7z" />
+  </svg>
+);
+
 // --- 3D Orbiting Planets ---
 
 function OrbitingPlanet({ radius, speed, size, color = "#ffffff", offset = 0 }: { radius: number, speed: number, size: number, color?: string, offset?: number }) {
@@ -100,6 +112,12 @@ const links = [
     label: "Like, comment, and subscribe",
     url: "https://www.youtube.com/@inidoflamingo",
     icon: YoutubeIcon,
+  },
+  {
+    name: "Clock",
+    label: "Jam untuk trading",
+    url: "https://jamtradingdoffy.vercel.app/",
+    icon: ClockIcon,
   }
 ];
 
