@@ -57,6 +57,81 @@ const ClockIcon = ({ size = 20 }: { size?: number }) => (
   </svg>
 );
 
+const ExnessTradingIcon = ({ size = 20 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Chart */}
+    <path
+      d="M3 20H21"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+
+    {/* Candle */}
+    <path
+      d="M7 16V8"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <rect
+      x="6"
+      y="10"
+      width="2"
+      height="4"
+      rx="1"
+      fill="currentColor"
+      opacity="0.35"
+    />
+
+    <path
+      d="M12 18V5"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <rect
+      x="11"
+      y="8"
+      width="2"
+      height="6"
+      rx="1"
+      fill="currentColor"
+    />
+
+    <path
+      d="M17 15V7"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+    <rect
+      x="16"
+      y="9"
+      width="2"
+      height="4"
+      rx="1"
+      fill="currentColor"
+      opacity="0.35"
+    />
+
+    {/* Up trend */}
+    <path
+      d="M4 17L9 13L13 15L20 8"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 // --- 3D Orbiting Planets ---
 
 function OrbitingPlanet({ radius, speed, size, color = "#ffffff", offset = 0 }: { radius: number, speed: number, size: number, color?: string, offset?: number }) {
@@ -112,6 +187,12 @@ const links = [
     label: "Like, comment, and subscribe",
     url: "https://www.youtube.com/@inidoflamingo",
     icon: YoutubeIcon,
+  },
+  {
+    name: "Exness",
+    label: "Broker Trading",
+    url: "https://one.exnessonelink.com/a/3adqqzds54",
+    icon: ExnessTradingIcon,
   },
   {
     name: "Clock",
