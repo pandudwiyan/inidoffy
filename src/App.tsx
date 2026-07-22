@@ -190,8 +190,8 @@ const links = [
   },
   {
     name: "Exness",
-    label: "Broker Trading",
-    url: "https://one.exnessonelink.com/a/3adqqzds54",
+    label: "Kode Partner : 3adqqzds54",
+    url: "https://one.exnessonelink.com/boarding/sign-up/a/3adqqzds54?lng=id",
     icon: ExnessTradingIcon,
   },
   {
