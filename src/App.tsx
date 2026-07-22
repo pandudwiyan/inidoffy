@@ -193,12 +193,6 @@ const links = [
     label: "Kode Partner : 3adqqzds54",
     url: "https://one.exnessonelink.com/boarding/sign-up/a/3adqqzds54?lng=id",
     icon: ExnessTradingIcon,
-  },
-  {
-    name: "Clock",
-    label: "Jam untuk trading",
-    url: "https://jamtradingdoffy.vercel.app/",
-    icon: ClockIcon,
   }
 ];
 
