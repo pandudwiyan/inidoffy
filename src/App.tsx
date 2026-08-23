@@ -132,6 +132,60 @@ const ExnessTradingIcon = ({ size = 20 }: { size?: number }) => (
   </svg>
 );
 
+const MyAppsIcon = ({ size = 20 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="3"
+      y="3"
+      width="7"
+      height="7"
+      rx="2"
+      fill="currentColor"
+      fillOpacity="0.3"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <rect
+      x="14"
+      y="3"
+      width="7"
+      height="7"
+      rx="2"
+      fill="currentColor"
+      fillOpacity="0.3"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <rect
+      x="3"
+      y="14"
+      width="7"
+      height="7"
+      rx="2"
+      fill="currentColor"
+      fillOpacity="0.3"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <rect
+      x="14"
+      y="14"
+      width="7"
+      height="7"
+      rx="2"
+      fill="currentColor"
+      fillOpacity="0.3"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+  </svg>
+);
 // --- 3D Orbiting Planets ---
 
 function OrbitingPlanet({ radius, speed, size, color = "#ffffff", offset = 0 }: { radius: number, speed: number, size: number, color?: string, offset?: number }) {
@@ -193,6 +247,12 @@ const links = [
     label: "Kode Partner : 3adqqzds54",
     url: "https://one.exnessonelink.com/boarding/sign-up/a/3adqqzds54?lng=id",
     icon: ExnessTradingIcon,
+  },
+  {
+    name: "My Apps",
+    label: "All Indicator by Doflamingo",
+    url: "https://landingpage-self-sigma.vercel.app/",
+    icon: MyAppsIcon,
   }
 ];
 
