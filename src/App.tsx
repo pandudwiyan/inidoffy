@@ -250,7 +250,7 @@ const links = [
   },
   {
     name: "My Apps",
-    label: "All Indicator by Doflamingo",
+    label: "All Indicators by Doflamingo",
     url: "https://landingpage-self-sigma.vercel.app/",
     icon: MyAppsIcon,
   }
