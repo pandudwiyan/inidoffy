@@ -65,69 +65,41 @@ const ExnessTradingIcon = ({ size = 20 }: { size?: number }) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    {/* Chart */}
+    {/* E */}
     <path
-      d="M3 20H21"
+      d="M10 5H3.5V19H10M3.5 12H9"
       stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
+      strokeWidth="2.4"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
     />
+    {/* X */}
+    <path
+      d="M13.5 5L21 19M21 5L13.5 19"
+      stroke="currentColor"
+      strokeWidth="2.4"
+      strokeLinecap="square"
+    />
+  </svg>
+);
 
-    {/* Candle */}
+const ValetaxIcon = ({ size = 20 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Stylized V mark with a layered inner chevron */}
     <path
-      d="M7 16V8"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <rect
-      x="6"
-      y="10"
-      width="2"
-      height="4"
-      rx="1"
-      fill="currentColor"
-      opacity="0.35"
-    />
-
-    <path
-      d="M12 18V5"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <rect
-      x="11"
-      y="8"
-      width="2"
-      height="6"
-      rx="1"
+      d="M2.5 4H8L12 13.5L16 4H21.5L14.5 20H9.5L2.5 4Z"
       fill="currentColor"
     />
-
     <path
-      d="M17 15V7"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <rect
-      x="16"
-      y="9"
-      width="2"
-      height="4"
-      rx="1"
-      fill="currentColor"
-      opacity="0.35"
-    />
-
-    {/* Up trend */}
-    <path
-      d="M4 17L9 13L13 15L20 8"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      d="M9.2 4H14.8L12 10.5L9.2 4Z"
+      fill="black"
+      fillOpacity="0.45"
     />
   </svg>
 );
@@ -248,6 +220,12 @@ const links = [
     label: "Kode Partner : 3adqqzds54",
     url: "https://one.exnessonelink.com/boarding/sign-up/a/3adqqzds54?lng=id",
     icon: ExnessTradingIcon,
+  },
+  {
+    name: "Valetax",
+    label: "Kode Referral : 84362",
+    url: "https://ma.valetax.com/p/84362",
+    icon: ValetaxIcon,
   },
   {
     name: "My Apps",
